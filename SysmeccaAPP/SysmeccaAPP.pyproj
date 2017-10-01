@@ -30,6 +30,20 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="ContactsApp\admin.py" />
+    <Compile Include="ContactsApp\apps.py" />
+    <Compile Include="ContactsApp\migrations\__init__.py" />
+    <Compile Include="ContactsApp\models.py" />
+    <Compile Include="ContactsApp\tests.py" />
+    <Compile Include="ContactsApp\views.py" />
+    <Compile Include="ContactsApp\__init__.py" />
+    <Compile Include="HomeApp\admin.py" />
+    <Compile Include="HomeApp\apps.py" />
+    <Compile Include="HomeApp\migrations\__init__.py" />
+    <Compile Include="HomeApp\models.py" />
+    <Compile Include="HomeApp\tests.py" />
+    <Compile Include="HomeApp\views.py" />
+    <Compile Include="HomeApp\__init__.py" />
     <Compile Include="manage.py" />
     <Compile Include="SysmeccaAPP\__init__.py" />
     <Compile Include="SysmeccaAPP\settings.py" />
@@ -60,6 +74,10 @@
     <Content Include="templates\Login.html" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="ContactsApp\" />
+    <Folder Include="ContactsApp\migrations\" />
+    <Folder Include="HomeApp\" />
+    <Folder Include="HomeApp\migrations\" />
     <Folder Include="static\" />
     <Folder Include="static\css\" />
     <Folder Include="static\fonts\" />
