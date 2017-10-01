@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "SysmeccaAPP", "SysmeccaAPP\SysmeccaAPP.pyproj", "{666C0718-01E3-4485-B6DB-D2EA6C0A6633}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{666C0718-01E3-4485-B6DB-D2EA6C0A6633}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{666C0718-01E3-4485-B6DB-D2EA6C0A6633}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{666C0718-01E3-4485-B6DB-D2EA6C0A6633}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{666C0718-01E3-4485-B6DB-D2EA6C0A6633}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {44C6B035-D605-4F2E-8109-B408FC59B120}
+	EndGlobalSection
+EndGlobal
