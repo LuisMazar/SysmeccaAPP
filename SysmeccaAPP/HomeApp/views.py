@@ -8,9 +8,9 @@ from django.contrib.auth.forms import AuthenticationForm
 
 
 # Create your views here.
-def login_(request):
+def signin(request):
     if not request.user.is_anonymous():
-        return redirect("https://www.google.com")
+        return redirect("index")
     
     if request.method == 'POST':
         form = AuthenticationForm(request.POST)

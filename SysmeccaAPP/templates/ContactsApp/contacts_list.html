@@ -1,0 +1,38 @@
+﻿{% extends "Base/master.html" %}
+
+{% block pagetitle %}Listado de Contactos{% endblock %}
+
+{% block content %}
+
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Nombre de Lista</th>
+                <th>Nombre de Contacto</th>
+                <th>Telefono</th>
+                <th>Ver Detalles</th>
+            </tr>
+        </thead>  
+        <tbody>
+            {% if data %}
+            {% for item in data %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ item.listName }}</td>
+                <td>{{ item.contactName }}</td>
+                <td>{{ item.telephone }}</td>
+                <td><a href="{% url 'contacts-details' id=item.idContact %}" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-eye-open"></span></a></td>
+            </tr>
+            {% endfor %}
+            {% else %}
+            <tr>
+                <td>NO HAY DATOS QUE MOSTRAR...</td>
+            </tr>
+            {% endif %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

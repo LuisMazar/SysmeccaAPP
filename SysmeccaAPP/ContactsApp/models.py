@@ -2,19 +2,22 @@ from django.db import models
 
 # Create your models here.
 
-categories_list = {
+categories_list = (
     ('cl','Club'),
     ('fr','Amigo'),
     ('su','Proveedor'),
     ('wo','Taller'),
-}
+)
+
+def upload_location(instance, filename):
+    return "%s/%s" %(instance.idContact, filename)
 
 class Contact (models.Model):
     idContact = models.AutoField(primary_key=True)
-    listName = models.CharField(max_length=50, null=True, blank=True, verbose_name="Nombre de Lista")
+    listName = models.CharField(max_length=50, verbose_name="Nombre de Lista")
     businessName = models.CharField(max_length=50, null=True, blank=True, verbose_name="Nombre de Negocios")
-    contactName = models.CharField(max_length=50, null=True, blank=True, verbose_name="Nombre de Contacto")
-    address1 = models.CharField(max_length=250, null=True, blank=True, verbose_name="Direccion 1")
+    contactName = models.CharField(max_length=50, verbose_name="Nombre de Contacto")
+    address1 = models.CharField(max_length=250, verbose_name="Direccion 1")
     address2 = models.CharField(max_length=250, null=True, blank=True, verbose_name="Direccion 2")
     address3 = models.CharField(max_length=250, null=True, blank=True, verbose_name="Direccion 3")
     address4 = models.CharField(max_length=250, null=True, blank=True, verbose_name="Direccion 4")
@@ -28,7 +31,7 @@ class Contact (models.Model):
     notes = models.TextField(verbose_name="Notas", null=True, blank=True)
     deleted = models.BooleanField(verbose_name="Eliminado")
     #contactType = 
-    picture = models.ImageField(verbose_name="Imagen", null=True, blank=True)
+    picture = models.ImageField(verbose_name="Imagen", max_length=400, null=True, blank=True, upload_to=upload_location)
     createdAt = models.DateField(auto_now_add=True)
     updatedAt = models.DateField(auto_now = True)
 
